@@ -18,6 +18,19 @@ class Fib(object):
         fib = self.a
         if fib > self.max:
             raise StopIteration
-        self.a, self.b = self.b, self.a + self.b
-        return fib
+        elif fib % 2 == 0:
+            self.a, self.b = self.b, self.a + self.b
+            return f"{fib} - Pare"
+        else:
+            self.a, self.b = self.b, self.a + self.b
+            return f"{fib} - No Pare"
+
+
+
+
+fib_1 = Fib(256)
+
+for i in fib_1:
+    print(i)
+
 
